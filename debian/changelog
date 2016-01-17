@@ -1,0 +1,5 @@
+erlang-riak (0.2015.11.11-0.1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Mathias Ertl <mati@jabber.at>  Sun, 17 Jan 2016 11:16:17 +0100
