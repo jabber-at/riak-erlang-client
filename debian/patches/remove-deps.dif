@@ -10,3 +10,14 @@
  
  {edoc_opts, [
      {stylesheet_file, "priv/edoc.css"},
+--- a/src/riakc.app.src
++++ b/src/riakc.app.src
+@@ -1,7 +1,7 @@
+ %% -*- erlang -*-
+ {application, riakc,
+  [{description, "Riak Client"},
+-  {vsn, git},
++  {vsn, "0.2015.11.11"},
+   {applications, [
+                   kernel,
+                   stdlib,
