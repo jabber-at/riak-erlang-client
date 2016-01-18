@@ -10,7 +10,7 @@
 --include_lib("riak_pb/include/riak_search_pb.hrl").
 --include_lib("riak_pb/include/riak_yokozuna_pb.hrl").
 --include_lib("riak_pb/include/riak_dt_pb.hrl").
-+-include_lib("riak_protobuf/include/riak_protobuf.hrl").
++-include_lib("riak_protobuf/include/riak_pb.hrl").
 +-include_lib("riak_protobuf/include/riak_kv_pb.hrl").
 +-include_lib("riak_protobuf/include/riak_pb_kv_codec.hrl").
 +-include_lib("riak_protobuf/include/riak_search_pb.hrl").
@@ -26,7 +26,7 @@
  -export([new_obj/4,index_id_to_bin/1]).
  
 --include_lib("riak_pb/include/riak_pb_kv_codec.hrl").
-+-include_lib("riak_protobuf/include/riak_protobuf_kv_codec.hrl").
++-include_lib("riak_protobuf/include/riak_pb_kv_codec.hrl").
  -ifdef(TEST).
  -include_lib("eunit/include/eunit.hrl").
  -endif.
