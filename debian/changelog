@@ -1,3 +1,9 @@
+erlang-riak (2.4.2-0.1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Mathias Ertl <mati@jabber.at>  Sun, 29 Jan 2017 22:09:16 +0100
+
 erlang-riak (0.2015.11.11-0.1) unstable; urgency=low
 
   * Initial release.
