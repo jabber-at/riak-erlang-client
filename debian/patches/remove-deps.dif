@@ -1,11 +1,11 @@
 --- a/rebar.config
 +++ b/rebar.config
-@@ -10,9 +10,6 @@
-     {platform_define, "^[0-9]+", namespaced_types},
-     {platform_define, "^18", deprecated_now}
+@@ -12,9 +12,6 @@
+     {platform_define, "^19", deprecated_19}
  ]}.
+ 
 -{deps, [
--    {riak_pb, "2.1.0.7", {git, "git://github.com/basho/riak_pb", {tag, "2.1.0.7"}}}
+-    {riak_pb, "2.1.4.*", {git, "https://github.com/basho/riak_pb", {tag, "2.1.4.2"}}}
 -]}.
  
  {edoc_opts, [
