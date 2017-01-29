@@ -1,4 +1,3 @@
-
 %% -------------------------------------------------------------------
 %%
 %% riakc: protocol buffer client
@@ -42,6 +41,8 @@
 -type client_options() :: [client_option()]. %% A list of client options.
 -type client_id() :: binary(). %% A client identifier, used for differentiating client processes
 -type bucket() :: binary(). %% A bucket name.
+-type bucket_type() :: binary().
+-type bucket_and_type() :: {bucket_type(), bucket()}.
 -type key() :: binary(). %% A key name.
 -type riakc_obj() :: riakc_obj:riakc_obj(). %% An object (bucket, key, metadata, value) stored in Riak.
 -type req_id() :: non_neg_integer(). %% Request identifier for streaming requests.
@@ -150,14 +151,28 @@
         continuation :: continuation()
         }).
 -define(INDEX_RESULTS, #index_results_v1).
--type index_results() :: #index_results_v1{}.
 
 -record(index_stream_result_v1, {
         keys :: keys(),
         terms :: index_terms()
         }).
 -define(INDEX_STREAM_RESULT, #index_stream_result_v1).
--type index_stream_result() :: #index_stream_result_v1{}.
+
+-record(index_body_results_v1, {
+        objects = [] :: [riakc_obj()],
+        continuation :: continuation()
+        }).
+-define(INDEX_BODY_RESULTS, #index_body_results_v1).
+
+-record(index_stream_body_result_v1, {
+        objects = [] :: [riakc_obj()]
+        }).
+-define(INDEX_STREAM_BODY_RESULT, #index_stream_body_result_v1).
+
+-type index_results() :: #index_results_v1{} | #index_body_results_v1{}.
+
+-type index_stream_result() :: #index_stream_result_v1{} |
+                               #index_stream_body_result_v1{}.
 
 -type index_done() :: {'done', continuation()}.
 
