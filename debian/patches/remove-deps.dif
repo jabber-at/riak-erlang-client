@@ -21,3 +21,20 @@
    {applications, [
                    kernel,
                    stdlib,
+--- a/src/riakc_ts.erl
++++ b/src/riakc_ts.erl
+@@ -32,10 +32,10 @@
+          delete/4,
+          stream_list_keys/2, stream_list_keys/3]).
+ 
+--include_lib("riak_pb/include/riak_pb.hrl").
+--include_lib("riak_pb/include/riak_kv_pb.hrl").
+--include_lib("riak_pb/include/riak_ts_pb.hrl").
+--include_lib("riak_pb/include/riak_ts_ttb.hrl").
++-include_lib("riak_protobuf/include/riak_pb.hrl").
++-include_lib("riak_protobuf/include/riak_kv_pb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_pb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_ttb.hrl").
+ -include("riakc.hrl").
+ 
+ -type table_name() :: string()|binary().

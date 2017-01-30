@@ -51,3 +51,44 @@
  
  -export([serialize/3,
           deserialize/1]).
+--- a/src/riakc_ts_put_operator.erl
++++ b/src/riakc_ts_put_operator.erl
+@@ -24,9 +24,9 @@
+ 
+ -module(riakc_ts_put_operator).
+ 
+--include_lib("riak_pb/include/riak_pb.hrl").
+--include_lib("riak_pb/include/riak_ts_ttb.hrl").
+--include_lib("riak_pb/include/riak_ts_pb.hrl").
++-include_lib("riak_protobuf/include/riak_pb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_ttb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_pb.hrl").
+ 
+ -export([serialize/3,
+          deserialize/1]).
+--- a/src/riakc_ts_query_operator.erl
++++ b/src/riakc_ts_query_operator.erl
+@@ -24,9 +24,9 @@
+ 
+ -module(riakc_ts_query_operator).
+ 
+--include_lib("riak_pb/include/riak_pb.hrl").
+--include_lib("riak_pb/include/riak_ts_pb.hrl").
+--include_lib("riak_pb/include/riak_ts_ttb.hrl").
++-include_lib("riak_protobuf/include/riak_pb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_pb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_ttb.hrl").
+ 
+ -export([serialize/2,
+          deserialize/1, deserialize/2]).
+--- a/test/riakc_pb_socket_tests.erl
++++ b/test/riakc_pb_socket_tests.erl
+@@ -27,7 +27,7 @@
+ 
+ -include("riakc.hrl").
+ 
+--include_lib("riak_pb/include/riak_pb_kv_codec.hrl").
++-include_lib("riak_protobuf/include/riak_pb_kv_codec.hrl").
+ -include_lib("eunit/include/eunit.hrl").
+ 
+ bad_connect_test() ->
