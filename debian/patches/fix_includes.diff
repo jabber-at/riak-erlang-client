@@ -1,21 +1,27 @@
 --- a/src/riakc_pb_socket.erl
 +++ b/src/riakc_pb_socket.erl
-@@ -27,12 +27,12 @@
+@@ -27,15 +27,15 @@
  
  -module(riakc_pb_socket).
  -include_lib("kernel/include/inet.hrl").
 --include_lib("riak_pb/include/riak_pb.hrl").
 --include_lib("riak_pb/include/riak_kv_pb.hrl").
 --include_lib("riak_pb/include/riak_pb_kv_codec.hrl").
+--include_lib("riak_pb/include/riak_ts_pb.hrl").
 --include_lib("riak_pb/include/riak_search_pb.hrl").
 --include_lib("riak_pb/include/riak_yokozuna_pb.hrl").
 --include_lib("riak_pb/include/riak_dt_pb.hrl").
-+-include_lib("riak_protobuf/include/riak_pb.hrl").
+--include_lib("riak_pb/include/riak_ts_pb.hrl").
+--include_lib("riak_pb/include/riak_ts_ttb.hrl").
++-include_lib("riak_protobuf/include/riak_protobuf.hrl").
 +-include_lib("riak_protobuf/include/riak_kv_pb.hrl").
-+-include_lib("riak_protobuf/include/riak_pb_kv_codec.hrl").
++-include_lib("riak_protobuf/include/riak_protobuf_kv_codec.hrl").
++-include_lib("riak_protobuf/include/riak_ts_pb.hrl").
 +-include_lib("riak_protobuf/include/riak_search_pb.hrl").
 +-include_lib("riak_protobuf/include/riak_yokozuna_pb.hrl").
 +-include_lib("riak_protobuf/include/riak_dt_pb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_pb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_ttb.hrl").
  -include("riakc.hrl").
  -behaviour(gen_server).
  
