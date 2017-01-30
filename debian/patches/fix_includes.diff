@@ -36,3 +36,18 @@
  -ifdef(TEST).
  -include_lib("eunit/include/eunit.hrl").
  -endif.
+--- a/src/riakc_ts_get_operator.erl
++++ b/src/riakc_ts_get_operator.erl
+@@ -24,9 +24,9 @@
+ 
+ -module(riakc_ts_get_operator).
+ 
+--include_lib("riak_pb/include/riak_pb.hrl").
+--include_lib("riak_pb/include/riak_ts_ttb.hrl").
+--include_lib("riak_pb/include/riak_ts_pb.hrl").
++-include_lib("riak_protobuf/include/riak_pb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_ttb.hrl").
++-include_lib("riak_protobuf/include/riak_ts_pb.hrl").
+ 
+ -export([serialize/3,
+          deserialize/1]).
