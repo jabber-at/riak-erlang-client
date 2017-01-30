@@ -1,6 +1,7 @@
 erlang-riak (2.4.2-0.1) unstable; urgency=low
 
   * New upstream release.
+  * Update Standards-Version to 3.9.8.
 
  -- Mathias Ertl <mati@jabber.at>  Sun, 29 Jan 2017 22:09:16 +0100
 
