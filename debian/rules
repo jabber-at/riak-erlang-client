@@ -24,3 +24,8 @@ override_dh_auto_install:
 			$(DESTDIR)/usr/lib/erlang/lib/riak-$(DEB_VERSION_UPSTREAM)/$${subdir} ; \
 		fi ; \
 	done
+
+override_dh_auto_test:
+	mkdir /tmp/erlang-riak-test-home/
+	HOME=/tmp rebar eunit -vv
+	rm -rf /tmp/erlang-riak-test-home/
